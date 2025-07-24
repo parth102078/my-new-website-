@@ -1,1 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Gallery - Parth Music Zone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #000;
+      color: #fff;
+      text-align: center;
+      padding: 40px 20px;
+      background-image: url('https://images.unsplash.com/photo-1485579149621-3123dd979885?auto=format&fit=crop&w=1950&q=80');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    h1 {
+      font-size: 36px;
+      margin-bottom: 30px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    a {
+      color: #00ffff;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 40px;
+      font-weight: bold;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUp 1s ease-out forwards;
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1 class="fade-in">🎤 Music Moments Gallery</h1>
+
+  <div class="gallery fade-in">
+    <img src="https://source.unsplash.com/400x300/?music,headphones" alt="Music 1">
+    <img src="https://source.unsplash.com/400x300/?concert,guitar" alt="Music 2">
+    <img src="https://source.unsplash.com/400x300/?dj,music" alt="Music 3">
+    <img src="https://source.unsplash.com/400x300/?microphone,singer" alt="Music 4">
+    <img src="https://source.unsplash.com/400x300/?studio,speaker" alt="Music 5">
+    <img src="https://source.unsplash.com/400x300/?vinyl,album" alt="Music 6">
+  </div>
+
+  <a class="fade-in" href="index.html">← Back to Home</a>
+
+</body>
+</html>
 
