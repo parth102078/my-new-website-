@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>My New Website</title>
+  <title>My Responsive Website</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -11,64 +12,102 @@
       background-position: center;
       background-repeat: no-repeat;
       color: #ffffff;
-      text-align: center;
-      padding: 50px;
       margin: 0;
+      text-align: center;
+      padding-top: 120px;
     }
 
     /* ✅ Logo */
-    img {
+    .logo {
       width: 120px;
       margin-top: 20px;
-      margin-bottom: 20px;
     }
 
-    /* ✅ Navigation Bar */
+    /* ✅ Navbar container */
     nav {
-      background-color: rgba(0, 0, 0, 0.6);
-      padding: 10px 0;
-      margin-bottom: 30px;
-      position: sticky;
+      background-color: rgba(0, 0, 0, 0.7);
+      position: fixed;
       top: 0;
+      left: 0;
+      width: 100%;
+      padding: 10px 0;
       z-index: 1000;
+    }
+
+    nav .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+      max-width: 1000px;
+      margin: auto;
     }
 
     nav ul {
       list-style: none;
       display: flex;
-      justify-content: center;
-      gap: 30px;
-      margin: 0;
-      padding: 0;
+      gap: 20px;
     }
 
     nav ul li a {
       color: #ffffff;
       text-decoration: none;
-      font-size: 18px;
       font-weight: bold;
-      transition: color 0.3s ease;
+      font-size: 18px;
     }
 
     nav ul li a:hover {
       color: #00ffff;
     }
 
-    /* ✅ Content */
+    /* ✅ Hamburger button (hidden on desktop) */
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .menu-toggle div {
+      width: 25px;
+      height: 3px;
+      background: white;
+      margin: 4px 0;
+    }
+
+    /* ✅ Mobile styles */
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        background: rgba(0, 0, 0, 0.9);
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        display: none;
+      }
+
+      nav ul.active {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+    }
+
+    /* ✅ Page Content */
     h1 {
       font-size: 36px;
-      margin-bottom: 20px;
     }
 
     p {
       font-size: 18px;
-      margin-bottom: 20px;
+      padding: 10px 20px;
     }
 
     a {
       color: #00ffff;
       text-decoration: none;
-      font-weight: bold;
     }
 
     a:hover {
@@ -78,25 +117,36 @@
 </head>
 <body>
 
-  <!-- ✅ Logo -->
-  <img src="logo.png" alt="Logo">
-
-  <!-- ✅ Navigation Bar -->
+  <!-- ✅ Navbar -->
   <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="music.html">Music</a></li>
-      <li><a href="gallery.html">Gallery</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
+    <div class="container">
+      <img src="logo.png" alt="Logo" class="logo">
+      <div class="menu-toggle" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <ul id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="music.html">Music</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
   </nav>
 
-  <!-- ✅ Website Content -->
+  <!-- ✅ Content -->
   <h1>👋 Welcome to My New Website</h1>
   <p>This website is created by Parth. More content coming soon!</p>
-
   <p><a href="https://github.com" target="_blank">Visit My GitHub</a></p>
+
+  <!-- ✅ JavaScript for Menu Toggle -->
+  <script>
+    function toggleMenu() {
+      document.getElementById('nav-links').classList.toggle('active');
+    }
+  </script>
 
 </body>
 </html>
