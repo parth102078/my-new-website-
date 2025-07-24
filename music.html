@@ -1,1 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>My Music - Parth Music Zone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #000000;
+      color: #ffffff;
+      margin: 0;
+      padding: 40px 20px;
+      text-align: center;
+      background-image: url('https://images.unsplash.com/photo-1511376777868-611b54f68947?auto=format&fit=crop&w=1950&q=80');
+      background-size: cover;
+      background-position: center;
+    }
+
+    h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    audio {
+      margin: 20px 0;
+    }
+
+    iframe {
+      margin: 30px 0;
+      border-radius: 12px;
+    }
+
+    a {
+      color: #00ffff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUp 1s ease-out forwards;
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1 class="fade-in">🎶 My Favorite Music</h1>
+  <p class="fade-in">I love listening to music that inspires me. Here are some of my favorite tracks:</p>
+
+  <!-- ✅ Audio Player -->
+  <h3 class="fade-in">🎵 MP3 Song</h3>
+  <audio controls class="fade-in">
+    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg" />
+    Your browser does not support the audio element.
+  </audio>
+
+  <!-- ✅ Spotify Embed -->
+  <h3 class="fade-in">🎧 Spotify Track</h3>
+  <iframe class="fade-in" style="border-radius:12px" src="https://open.spotify.com/embed/track/6yJd85YdVkuvpxKtZwL8Ij?utm_source=generator" width="100%" height="152" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+  <!-- ✅ YouTube Link -->
+  <h3 class="fade-in">📺 Watch on YouTube</h3>
+  <p class="fade-in">
+    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Click here to listen on YouTube</a>
+  </p>
+
+  <!-- ✅ Back to Home -->
+  <p style="margin-top: 40px;" class="fade-in">
+    <a href="index.html">← Back to Home</a>
+  </p>
+
+</body>
+</html>
 
