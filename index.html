@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <title>Parth Music Zone</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
-  <!-- 1️⃣ Google Fonts -->
+
+  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
   <style>
@@ -17,13 +17,13 @@
 
     body {
       font-family: 'Poppins', sans-serif;
-      background: linear-gradient(to right, #0f2027, #203a43, #2c5364); /* 7️⃣ Gradient BG */
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
       color: #ffffff;
       text-align: center;
       padding: 20px;
+      transition: all 0.3s ease;
     }
 
-    /* 3️⃣ Navigation Bar */
     nav {
       background-color: #000000aa;
       padding: 12px 0;
@@ -60,7 +60,7 @@
       font-size: 36px;
       color: #00ffff;
       margin-bottom: 10px;
-      animation: fadeIn 1s ease-out; /* 6️⃣ Animation */
+      animation: fadeIn 1s ease-out;
     }
 
     p {
@@ -94,7 +94,7 @@
       font-weight: bold;
       cursor: pointer;
       margin-top: 20px;
-      transition: background 0.3s ease; /* 5️⃣ Hover Effect */
+      transition: background 0.3s ease;
     }
 
     button:hover {
@@ -118,6 +118,25 @@
       }
     }
 
+    /* 🌙 Dark Mode Styles */
+    .dark-mode {
+      background: #121212 !important;
+      color: #ffffff !important;
+    }
+
+    .dark-mode nav {
+      background-color: #222 !important;
+    }
+
+    .dark-mode a {
+      color: #00ffff !important;
+    }
+
+    .dark-mode button {
+      background-color: #00cccc !important;
+      color: #000 !important;
+    }
+
     @media (max-width: 600px) {
       h1 {
         font-size: 26px;
@@ -132,11 +151,29 @@
         gap: 15px;
       }
     }
+
+    /* 🔘 Toggle Button */
+    #toggleDark {
+      position: fixed;
+      top: 15px;
+      right: 15px;
+      padding: 10px 14px;
+      background: #00ffff;
+      color: #000;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: bold;
+      z-index: 1000;
+    }
   </style>
 </head>
 <body>
 
-  <!-- 3️⃣ Navigation -->
+  <!-- 🔘 Dark Mode Toggle Button -->
+  <button id="toggleDark">🌙</button>
+
+  <!-- Navigation -->
   <nav>
     <ul>
       <li><a href="index.html">Home</a></li>
@@ -167,16 +204,24 @@
     <button onclick="contactMe()">Contact Me</button>
   </section>
 
-  <!-- 8️⃣ Footer -->
+  <!-- Footer -->
   <footer>
     &copy; 2025 Parth Music Zone. All rights reserved.
   </footer>
 
-  <!-- Contact Alert -->
+  <!-- JS: Contact Alert + Dark Mode -->
   <script>
     function contactMe() {
       alert("📧 Email: parth@example.com");
     }
+
+    const toggle = document.getElementById("toggleDark");
+    const body = document.body;
+
+    toggle.addEventListener("click", () => {
+      body.classList.toggle("dark-mode");
+      toggle.textContent = body.classList.contains("dark-mode") ? "🌞" : "🌙";
+    });
   </script>
 
 </body>
