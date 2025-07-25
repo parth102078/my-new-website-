@@ -2,9 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Parth Music Zone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- 1️⃣ Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
   <style>
     * {
       box-sizing: border-box;
@@ -14,24 +17,25 @@
 
     body {
       font-family: 'Poppins', sans-serif;
-      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-      color: #fff;
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364); /* 7️⃣ Gradient BG */
+      color: #ffffff;
       text-align: center;
       padding: 20px;
     }
 
-    /* ✅ Navigation Bar */
+    /* 3️⃣ Navigation Bar */
     nav {
-      background-color: #000000cc;
-      padding: 10px 0;
+      background-color: #000000aa;
+      padding: 12px 0;
       margin-bottom: 30px;
     }
 
     nav ul {
       display: flex;
       justify-content: center;
-      gap: 30px;
+      gap: 25px;
       list-style: none;
+      flex-wrap: wrap;
     }
 
     nav ul li a {
@@ -45,28 +49,25 @@
       text-decoration: underline;
     }
 
-    /* ✅ Content */
-    header {
-      margin-top: 20px;
-    }
-
     header img {
-      width: 130px;
+      width: 140px;
       border-radius: 50%;
+      border: 4px solid #00ffff;
       margin-bottom: 20px;
-      border: 3px solid #00ffff;
     }
 
     h1 {
       font-size: 36px;
-      margin-bottom: 10px;
       color: #00ffff;
+      margin-bottom: 10px;
+      animation: fadeIn 1s ease-out; /* 6️⃣ Animation */
     }
 
     p {
       font-size: 18px;
       max-width: 600px;
       margin: 0 auto 30px;
+      animation: fadeIn 1s ease-out;
     }
 
     section {
@@ -74,15 +75,14 @@
       animation: fadeIn 1s ease-in;
     }
 
-    ul {
+    ul.hobbies {
       list-style: none;
-      padding: 0;
       margin-top: 20px;
     }
 
-    ul li {
+    ul.hobbies li {
       font-size: 18px;
-      margin-bottom: 10px;
+      margin: 8px 0;
     }
 
     button {
@@ -94,6 +94,7 @@
       font-weight: bold;
       cursor: pointer;
       margin-top: 20px;
+      transition: background 0.3s ease; /* 5️⃣ Hover Effect */
     }
 
     button:hover {
@@ -118,24 +119,24 @@
     }
 
     @media (max-width: 600px) {
-      nav ul {
-        flex-direction: column;
-        gap: 15px;
-      }
-
       h1 {
-        font-size: 28px;
+        font-size: 26px;
       }
 
       p {
         font-size: 16px;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 15px;
       }
     }
   </style>
 </head>
 <body>
 
-  <!-- ✅ Navigation -->
+  <!-- 3️⃣ Navigation -->
   <nav>
     <ul>
       <li><a href="index.html">Home</a></li>
@@ -145,36 +146,36 @@
     </ul>
   </nav>
 
-  <!-- ✅ Logo + Header -->
+  <!-- Header -->
   <header>
-    <img src="https://via.placeholder.com/130x130.png?text=Parth" alt="Parth Logo">
-    <h1>Welcome to Parth Music Zone 🎧</h1>
-    <p>Hi, I'm Parth. This is my personal website where I share my hobbies, favorite songs, and creativity. Explore & enjoy!</p>
+    <img src="https://via.placeholder.com/140.png?text=Parth" alt="Parth Logo" />
+    <h1>🎧 Parth Music Zone</h1>
+    <p>Welcome to my personal site! I love music, web design, and creativity.</p>
   </header>
 
-  <!-- ✅ About Section -->
+  <!-- About Section -->
   <section>
-    <h2>✨ My Hobbies</h2>
-    <ul>
-      <li>🎵 Listening to music</li>
-      <li>📷 Photography</li>
-      <li>💻 Coding & Web Design</li>
-      <li>🎨 Drawing & Art</li>
-      <li>🏏 Cricket</li>
+    <h2>My Hobbies</h2>
+    <ul class="hobbies">
+      <li>🎵 Listening to Music</li>
+      <li>🎨 Drawing</li>
+      <li>💻 Web Development</li>
+      <li>📸 Photography</li>
+      <li>🏏 Playing Cricket</li>
     </ul>
 
     <button onclick="contactMe()">Contact Me</button>
   </section>
 
-  <!-- ✅ Footer -->
+  <!-- 8️⃣ Footer -->
   <footer>
     &copy; 2025 Parth Music Zone. All rights reserved.
   </footer>
 
-  <!-- ✅ Contact Alert -->
+  <!-- Contact Alert -->
   <script>
     function contactMe() {
-      alert("Email me at: parth@example.com");
+      alert("📧 Email: parth@example.com");
     }
   </script>
 
