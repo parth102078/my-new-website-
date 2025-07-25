@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Parth's Gallery</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <title>Gallery - Parth Music Zone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
     body {
-      background: #111;
-      color: white;
-      font-family: Arial;
-      padding: 20px;
+      font-family: 'Poppins', sans-serif;
+      background-color: #0f2027;
+      background-image: linear-gradient(to right, #203a43, #2c5364);
+      color: #fff;
       text-align: center;
+      margin: 0;
+      padding: 40px 20px;
     }
 
     h1 {
+      font-size: 32px;
+      margin-bottom: 30px;
       color: #00ffff;
     }
 
@@ -21,23 +25,35 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 20px;
-      margin-top: 30px;
     }
 
     .gallery img {
       width: 100%;
       border-radius: 10px;
-      transition: transform 0.3s;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .gallery img:hover {
       transform: scale(1.05);
+      box-shadow: 0 0 15px #00ffff;
     }
 
-    a {
-      color: #00ffff;
-      display: block;
+    a.back {
+      display: inline-block;
       margin-top: 40px;
+      font-size: 16px;
+      color: #00ffff;
+      text-decoration: none;
+    }
+
+    a.back:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 24px;
+      }
     }
   </style>
 </head>
@@ -46,13 +62,15 @@
   <h1>📸 My Gallery</h1>
 
   <div class="gallery">
-    <img src="https://source.unsplash.com/400x300/?music" alt="music">
-    <img src="https://source.unsplash.com/400x300/?guitar" alt="guitar">
-    <img src="https://source.unsplash.com/400x300/?concert" alt="concert">
-    <img src="https://source.unsplash.com/400x300/?dj" alt="dj">
+    <img src="https://source.unsplash.com/400x300/?music" alt="Music" />
+    <img src="https://source.unsplash.com/400x300/?guitar" alt="Guitar" />
+    <img src="https://source.unsplash.com/400x300/?dj" alt="DJ" />
+    <img src="https://source.unsplash.com/400x300/?microphone" alt="Microphone" />
+    <img src="https://source.unsplash.com/400x300/?concert" alt="Concert" />
+    <img src="https://source.unsplash.com/400x300/?headphones" alt="Headphones" />
   </div>
 
-  <a href="index.html">← Back to Home</a>
+  <a class="back" href="index.html">← Back to Home</a>
 
 </body>
 </html>
