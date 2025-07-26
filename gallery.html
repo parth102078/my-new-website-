@@ -31,10 +31,32 @@
       width: 100%;
       border-radius: 12px;
       transition: transform 0.3s ease;
+      cursor: pointer;
     }
 
     .gallery img:hover {
       transform: scale(1.05);
+    }
+
+    /* 🔍 Lightbox Style */
+    #lightbox {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.9);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+
+    #lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      border: 5px solid #00ffff;
+      border-radius: 10px;
     }
 
     a.back {
@@ -55,15 +77,36 @@
   <h1>📸 My Photo Gallery</h1>
 
   <div class="gallery">
-    <img src="https://source.unsplash.com/random/400x300?nature" alt="Nature" />
-    <img src="https://source.unsplash.com/random/400x301?music" alt="Music" />
-    <img src="https://source.unsplash.com/random/400x302?coding" alt="Coding" />
-    <img src="https://source.unsplash.com/random/400x303?art" alt="Art" />
-    <img src="https://source.unsplash.com/random/400x304?photography" alt="Photography" />
-    <img src="https://source.unsplash.com/random/400x305?cricket" alt="Cricket" />
+    <img src="https://source.unsplash.com/400x300?nature" alt="Nature" />
+    <img src="https://source.unsplash.com/400x301?music" alt="Music" />
+    <img src="https://source.unsplash.com/400x302?coding" alt="Coding" />
+    <img src="https://source.unsplash.com/400x303?art" alt="Art" />
+    <img src="https://source.unsplash.com/400x304?photography" alt="Photography" />
+    <img src="https://source.unsplash.com/400x305?cricket" alt="Cricket" />
+  </div>
+
+  <div id="lightbox">
+    <img src="" alt="Preview" />
   </div>
 
   <a class="back" href="index.html">← Back to Home</a>
+
+  <script>
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = lightbox.querySelector("img");
+    const images = document.querySelectorAll(".gallery img");
+
+    images.forEach(img => {
+      img.addEventListener("click", () => {
+        lightbox.style.display = "flex";
+        lightboxImg.src = img.src;
+      });
+    });
+
+    lightbox.addEventListener("click", () => {
+      lightbox.style.display = "none";
+    });
+  </script>
 
 </body>
 </html>
