@@ -1,1 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>My Projects - Parth</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #1e1e1e;
+      color: #fff;
+      text-align: center;
+      padding: 30px;
+    }
+
+    h1 {
+      margin-bottom: 30px;
+      color: #00ffff;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .card {
+      background: #2c3e50;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .card h3 {
+      color: #00ffff;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 15px;
+      margin-bottom: 15px;
+    }
+
+    .card a {
+      display: inline-block;
+      background: #00ffff;
+      color: #000;
+      padding: 8px 18px;
+      border-radius: 20px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .card a:hover {
+      background: #00cccc;
+    }
+
+    a.back {
+      display: inline-block;
+      margin-top: 40px;
+      color: #00ffff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    a.back:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>💼 My Projects</h1>
+
+  <div class="projects">
+    <div class="card">
+      <img src="https://source.unsplash.com/400x250?website" alt="Project 1">
+      <h3>Personal Website</h3>
+      <p>A responsive portfolio with dark mode and animation.</p>
+      <a href="index.html">View</a>
+    </div>
+
+    <div class="card">
+      <img src="https://source.unsplash.com/400x251?music" alt="Project 2">
+      <h3>Music Gallery</h3>
+      <p>Spotify embedded music page with favorites playlist.</p>
+      <a href="music.html">View</a>
+    </div>
+
+    <div class="card">
+      <img src="https://source.unsplash.com/400x252?gallery" alt="Project 3">
+      <h3>Image Gallery</h3>
+      <p>Lightbox-enabled beautiful image showcase gallery.</p>
+      <a href="gallery.html">View</a>
+    </div>
+  </div>
+
+  <a class="back" href="index.html">← Back to Home</a>
+
+</body>
+</html>
 
