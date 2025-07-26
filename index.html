@@ -63,6 +63,18 @@
       animation: fadeIn 1s ease-out;
     }
 
+    .cursor {
+      display: inline-block;
+      color: #00ffff;
+      animation: blink 0.7s infinite;
+      font-weight: bold;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+
     p {
       font-size: 18px;
       max-width: 600px;
@@ -118,7 +130,7 @@
       }
     }
 
-    /* 🌙 Dark Mode Styles */
+    /* Dark Mode Styles */
     .dark-mode {
       background: #121212 !important;
       color: #ffffff !important;
@@ -152,7 +164,7 @@
       }
     }
 
-    /* 🔘 Toggle Button */
+    /* Dark Mode Button */
     #toggleDark {
       position: fixed;
       top: 15px;
@@ -170,7 +182,7 @@
 </head>
 <body>
 
-  <!-- 🔘 Dark Mode Toggle Button -->
+  <!-- 🔘 Dark Mode Toggle -->
   <button id="toggleDark">🌙</button>
 
   <!-- Navigation -->
@@ -186,7 +198,7 @@
   <!-- Header -->
   <header>
     <img src="https://via.placeholder.com/140.png?text=Parth" alt="Parth Logo" />
-    <h1>🎧 Parth Music Zone</h1>
+    <h1><span id="typing-text"></span><span class="cursor">|</span></h1>
     <p>Welcome to my personal site! I love music, web design, and creativity.</p>
   </header>
 
@@ -209,15 +221,29 @@
     &copy; 2025 Parth Music Zone. All rights reserved.
   </footer>
 
-  <!-- JS: Contact Alert + Dark Mode -->
+  <!-- Scripts: Contact + Typing + Dark Mode -->
   <script>
+    // Contact Button
     function contactMe() {
       alert("📧 Email: parth@example.com");
     }
 
+    // Typing Effect
+    const text = "🎧 Hi, I'm Parth";
+    let index = 0;
+    function typeText() {
+      const typingText = document.getElementById("typing-text");
+      if (index < text.length) {
+        typingText.innerHTML += text.charAt(index);
+        index++;
+        setTimeout(typeText, 100);
+      }
+    }
+    window.onload = typeText;
+
+    // Dark Mode Toggle
     const toggle = document.getElementById("toggleDark");
     const body = document.body;
-
     toggle.addEventListener("click", () => {
       body.classList.toggle("dark-mode");
       toggle.textContent = body.classList.contains("dark-mode") ? "🌞" : "🌙";
