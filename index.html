@@ -24,6 +24,36 @@
       transition: all 0.3s ease;
     }
 
+    /* ⏳ Preloader */
+    #preloader {
+      background: #000;
+      height: 100vh;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 9999;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #preloader::after {
+      content: "";
+      width: 60px;
+      height: 60px;
+      border: 6px solid #00ffff;
+      border-top-color: transparent;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
     nav {
       background-color: #000000aa;
       padding: 12px 0;
@@ -130,7 +160,7 @@
       }
     }
 
-    /* Dark Mode Styles */
+    /* 🌗 Dark Mode */
     .dark-mode {
       background: #121212 !important;
       color: #ffffff !important;
@@ -164,7 +194,7 @@
       }
     }
 
-    /* Dark Mode Button */
+    /* 🌙 Dark Mode Button */
     #toggleDark {
       position: fixed;
       top: 15px;
@@ -182,7 +212,10 @@
 </head>
 <body>
 
-  <!-- 🔘 Dark Mode Toggle -->
+  <!-- ⏳ Preloader -->
+  <div id="preloader"></div>
+
+  <!-- 🌙 Dark Mode Toggle -->
   <button id="toggleDark">🌙</button>
 
   <!-- Navigation -->
@@ -221,14 +254,20 @@
     &copy; 2025 Parth Music Zone. All rights reserved.
   </footer>
 
-  <!-- Scripts: Contact + Typing + Dark Mode -->
+  <!-- JavaScript -->
   <script>
-    // Contact Button
+    // ⏳ Remove Preloader after load
+    window.addEventListener("load", () => {
+      const loader = document.getElementById("preloader");
+      loader.style.display = "none";
+    });
+
+    // ✉️ Contact
     function contactMe() {
       alert("📧 Email: parth@example.com");
     }
 
-    // Typing Effect
+    // ⌨️ Typing Text
     const text = "🎧 Hi, I'm Parth";
     let index = 0;
     function typeText() {
@@ -241,7 +280,7 @@
     }
     window.onload = typeText;
 
-    // Dark Mode Toggle
+    // 🌙 Dark Mode Toggle
     const toggle = document.getElementById("toggleDark");
     const body = document.body;
     toggle.addEventListener("click", () => {
