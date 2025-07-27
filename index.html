@@ -4,9 +4,12 @@
   <meta charset="UTF-8" />
   <title>Parth Music Zone</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- Google Font -->
+  
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+
+  <!-- AOS Animation CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
   <style>
     * {
@@ -18,9 +21,9 @@
     body {
       font-family: 'Poppins', sans-serif;
       background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-      color: #ffffff;
-      text-align: center;
+      color: #fff;
       padding: 20px;
+      text-align: center;
     }
 
     nav {
@@ -48,121 +51,70 @@
       text-decoration: underline;
     }
 
-    header img {
-      width: 140px;
-      border-radius: 50%;
-      border: 4px solid #00ffff;
-      margin-bottom: 20px;
-    }
-
     h1 {
       font-size: 36px;
+      margin-top: 30px;
       color: #00ffff;
-      margin-bottom: 10px;
+      animation: fadeIn 1s ease-out;
     }
 
     p {
       font-size: 18px;
-      max-width: 600px;
-      margin: 0 auto 30px;
+      margin: 20px 0;
+      animation: fadeIn 1s ease-out;
     }
 
-    section {
-      margin-top: 30px;
-    }
-
-    ul.hobbies {
-      list-style: none;
+    iframe {
       margin-top: 20px;
-    }
-
-    ul.hobbies li {
-      font-size: 18px;
-      margin: 8px 0;
-    }
-
-    button {
-      padding: 12px 25px;
-      background-color: #00ffff;
-      border: none;
-      border-radius: 5px;
-      color: #000;
-      font-weight: bold;
-      cursor: pointer;
-      margin-top: 20px;
-      transition: background 0.3s ease;
-    }
-
-    button:hover {
-      background-color: #00cccc;
+      border-radius: 12px;
     }
 
     footer {
-      margin-top: 60px;
+      margin-top: 50px;
       font-size: 14px;
       color: #ccc;
     }
 
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
     @media (max-width: 600px) {
-      h1 {
-        font-size: 26px;
-      }
-
-      p {
-        font-size: 16px;
-      }
-
-      nav ul {
-        flex-direction: column;
-        gap: 15px;
-      }
+      h1 { font-size: 28px; }
+      nav ul { flex-direction: column; gap: 15px; }
     }
   </style>
 </head>
 <body>
 
-  <!-- ✅ Navigation with Scroll Effects link -->
+  <!-- Navigation -->
   <nav>
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="music.html">Music</a></li>
       <li><a href="gallery.html">Gallery</a></li>
-      <li><a href="scroll.html">Scroll Effects</a></li> <!-- NEW LINK -->
       <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
 
-  <!-- Header -->
-  <header>
-    <img src="https://via.placeholder.com/140.png?text=Parth" alt="Parth Logo" />
-    <h1>🎧 Parth Music Zone</h1>
-    <p>Welcome to my personal site! I love music, web design, and creativity.</p>
-  </header>
+  <!-- Logo Embed (Pinterest) -->
+  <iframe src="https://assets.pinterest.com/ext/embed.html?id=1056164550120667653" 
+          height="359" width="345" frameborder="0" scrolling="no"></iframe>
 
-  <!-- About Section -->
-  <section>
-    <h2>My Hobbies</h2>
-    <ul class="hobbies">
-      <li>🎵 Listening to Music</li>
-      <li>🎨 Drawing</li>
-      <li>💻 Web Development</li>
-      <li>📸 Photography</li>
-      <li>🏏 Playing Cricket</li>
-    </ul>
-
-    <button onclick="contactMe()">Contact Me</button>
-  </section>
+  <!-- Website Heading -->
+  <h1>🎧 Welcome to Parth Music Zone</h1>
+  <p>Music • Creativity • Web • Photography – All in one place. Explore now!</p>
 
   <!-- Footer -->
   <footer>
     &copy; 2025 Parth Music Zone. All rights reserved.
   </footer>
 
-  <!-- Contact Alert -->
+  <!-- AOS Animation JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
-    function contactMe() {
-      alert("📧 Email: parth@example.com");
-    }
+    AOS.init({ duration: 1000, once: true });
   </script>
 
 </body>
