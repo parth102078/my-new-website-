@@ -8,9 +8,6 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
 
-  <!-- AOS Animation CSS -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-
   <style>
     * {
       box-sizing: border-box;
@@ -21,11 +18,12 @@
     body {
       font-family: 'Poppins', sans-serif;
       background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-      color: #fff;
-      padding: 20px;
+      color: #ffffff;
       text-align: center;
+      padding: 20px;
     }
 
+    /* Navigation Bar */
     nav {
       background-color: #000000aa;
       padding: 12px 0;
@@ -51,70 +49,120 @@
       text-decoration: underline;
     }
 
+    header iframe {
+      border-radius: 12px;
+      width: 120px;
+      height: 120px;
+      margin-bottom: 20px;
+      border: 3px solid #00ffff;
+    }
+
     h1 {
       font-size: 36px;
-      margin-top: 30px;
       color: #00ffff;
-      animation: fadeIn 1s ease-out;
+      margin-bottom: 10px;
     }
 
     p {
       font-size: 18px;
-      margin: 20px 0;
-      animation: fadeIn 1s ease-out;
+      max-width: 600px;
+      margin: 0 auto 30px;
     }
 
-    iframe {
+    section {
+      margin-top: 30px;
+    }
+
+    ul.hobbies {
+      list-style: none;
       margin-top: 20px;
-      border-radius: 12px;
+    }
+
+    ul.hobbies li {
+      font-size: 18px;
+      margin: 8px 0;
+    }
+
+    button {
+      padding: 12px 25px;
+      background-color: #00ffff;
+      border: none;
+      border-radius: 5px;
+      color: #000;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #00cccc;
     }
 
     footer {
-      margin-top: 50px;
+      margin-top: 60px;
       font-size: 14px;
       color: #ccc;
     }
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
     @media (max-width: 600px) {
-      h1 { font-size: 28px; }
-      nav ul { flex-direction: column; gap: 15px; }
+      h1 {
+        font-size: 26px;
+      }
+
+      p {
+        font-size: 16px;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 15px;
+      }
     }
   </style>
 </head>
 <body>
 
-  <!-- Navigation -->
+  <!-- Navigation with Blog -->
   <nav>
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="music.html">Music</a></li>
       <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="blog.html">Blog</a></li> <!-- ✅ Blog link added -->
       <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
 
-  <!-- Logo Embed (Pinterest) -->
-  <iframe src="https://assets.pinterest.com/ext/embed.html?id=1056164550120667653" 
-          height="359" width="345" frameborder="0" scrolling="no"></iframe>
+  <!-- Logo (Pinterest Embed) -->
+  <header>
+    <iframe src="https://assets.pinterest.com/ext/embed.html?id=1056164550120667653" frameborder="0" scrolling="no"></iframe>
+    <h1>🎧 Parth Music Zone</h1>
+    <p>Welcome to my personal site! I love music, web design, and creativity.</p>
+  </header>
 
-  <!-- Website Heading -->
-  <h1>🎧 Welcome to Parth Music Zone</h1>
-  <p>Music • Creativity • Web • Photography – All in one place. Explore now!</p>
+  <!-- About Section -->
+  <section>
+    <h2>My Hobbies</h2>
+    <ul class="hobbies">
+      <li>🎵 Listening to Music</li>
+      <li>🎨 Drawing</li>
+      <li>💻 Web Development</li>
+      <li>📸 Photography</li>
+      <li>🏏 Playing Cricket</li>
+    </ul>
 
-  <!-- Footer -->
+    <button onclick="contactMe()">Contact Me</button>
+  </section>
+
   <footer>
     &copy; 2025 Parth Music Zone. All rights reserved.
   </footer>
 
-  <!-- AOS Animation JS -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
-    AOS.init({ duration: 1000, once: true });
+    function contactMe() {
+      alert("📧 Email: parth@example.com");
+    }
   </script>
 
 </body>
