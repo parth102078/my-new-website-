@@ -1,1 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Parth Music Zone – Scroll Reveal</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- ✅ Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+
+  <!-- ✅ AOS CSS (Scroll Animation Library) -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      margin: 0;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 36px;
+      color: #00ffff;
+      margin-bottom: 30px;
+    }
+
+    .section {
+      margin: 60px 0;
+      padding: 20px;
+      background-color: #ffffff10;
+      border-radius: 10px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .section h2 {
+      color: #00ffff;
+      margin-bottom: 15px;
+    }
+
+    .section p {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    footer {
+      margin-top: 60px;
+      font-size: 14px;
+      color: #ccc;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🎉 Parth Music Zone – Scroll Effects</h1>
+
+  <div class="section" data-aos="fade-up">
+    <h2>🎵 Music</h2>
+    <p>Music gives a soul to the universe, wings to the mind, flight to the imagination, and life to everything.</p>
+  </div>
+
+  <div class="section" data-aos="fade-right">
+    <h2>💻 Web Design</h2>
+    <p>I love creating beautiful and functional websites. Designing is not just looks – it's about experience.</p>
+  </div>
+
+  <div class="section" data-aos="zoom-in">
+    <h2>📸 Photography</h2>
+    <p>Capturing real moments through a lens is something I enjoy. Every photo tells a story.</p>
+  </div>
+
+  <footer>
+    &copy; 2025 Parth Music Zone
+  </footer>
+
+  <!-- ✅ AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  </script>
+
+</body>
+</html>
 
