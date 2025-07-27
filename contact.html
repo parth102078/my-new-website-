@@ -4,96 +4,105 @@
   <meta charset="UTF-8" />
   <title>Contact - Parth Music Zone</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
   <style>
     body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #0f0f0f;
-      color: #ffffff;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #141E30, #243B55);
+      color: #fff;
       text-align: center;
-      padding: 40px 20px;
-      background-image: url('https://images.unsplash.com/photo-1580656016214-b9c79b31c87e?auto=format&fit=crop&w=1950&q=80');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
+      padding: 20px;
+    }
+
+    nav {
+      background-color: #000000aa;
+      padding: 12px 0;
+      margin-bottom: 30px;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      list-style: none;
+      flex-wrap: wrap;
+    }
+
+    nav ul li a {
+      color: #00ffff;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 16px;
+    }
+
+    nav ul li a:hover {
+      text-decoration: underline;
     }
 
     h1 {
-      font-size: 36px;
+      color: #00ffff;
       margin-bottom: 20px;
     }
 
     form {
-      background: rgba(0, 0, 0, 0.6);
-      padding: 30px;
-      border-radius: 10px;
       max-width: 500px;
-      margin: auto;
+      margin: 0 auto;
+      background: #ffffff11;
+      padding: 20px;
+      border-radius: 10px;
     }
 
     input, textarea {
       width: 100%;
       padding: 12px;
       margin: 10px 0;
-      border: none;
       border-radius: 5px;
-      font-size: 16px;
+      border: none;
     }
 
     button {
-      padding: 12px 25px;
       background-color: #00ffff;
       color: #000;
+      padding: 12px 20px;
       border: none;
-      font-size: 16px;
       border-radius: 5px;
-      cursor: pointer;
       font-weight: bold;
+      cursor: pointer;
     }
 
     button:hover {
       background-color: #00cccc;
     }
 
-    a {
-      display: inline-block;
-      margin-top: 30px;
-      color: #00ffff;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    .fade-in {
-      opacity: 0;
-      transform: translateY(30px);
-      animation: fadeInUp 1s ease-out forwards;
-    }
-
-    @keyframes fadeInUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+    footer {
+      margin-top: 60px;
+      font-size: 14px;
+      color: #ccc;
     }
   </style>
 </head>
 <body>
 
-  <h1 class="fade-in">📞 Contact Me</h1>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="music.html">Music</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
 
-  <form class="fade-in">
+  <h1>📬 Contact Me</h1>
+
+  <form>
     <input type="text" placeholder="Your Name" required />
     <input type="email" placeholder="Your Email" required />
-    <textarea rows="5" placeholder="Your Message..." required></textarea>
-    <button type="submit" onclick="alert('Message not actually sent 😄')">Send Message</button>
+    <textarea rows="5" placeholder="Your Message"></textarea>
+    <button type="submit">Send</button>
   </form>
 
-  <a class="fade-in" href="index.html">← Back to Home</a>
-
+  <footer>
+    &copy; 2025 Parth Music Zone. All rights reserved.
+  </footer>
 </body>
 </html>
-
