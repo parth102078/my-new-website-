@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
 
   <style>
     * {
@@ -21,37 +21,6 @@
       color: #ffffff;
       text-align: center;
       padding: 20px;
-      transition: all 0.3s ease;
-    }
-
-    /* ⏳ Preloader */
-    #preloader {
-      background: #000;
-      height: 100vh;
-      width: 100%;
-      position: fixed;
-      top: 0;
-      left: 0;
-      z-index: 9999;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    #preloader::after {
-      content: "";
-      width: 60px;
-      height: 60px;
-      border: 6px solid #00ffff;
-      border-top-color: transparent;
-      border-radius: 50%;
-      animation: spin 1s linear infinite;
-    }
-
-    @keyframes spin {
-      to {
-        transform: rotate(360deg);
-      }
     }
 
     nav {
@@ -90,31 +59,16 @@
       font-size: 36px;
       color: #00ffff;
       margin-bottom: 10px;
-      animation: fadeIn 1s ease-out;
-    }
-
-    .cursor {
-      display: inline-block;
-      color: #00ffff;
-      animation: blink 0.7s infinite;
-      font-weight: bold;
-    }
-
-    @keyframes blink {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0; }
     }
 
     p {
       font-size: 18px;
       max-width: 600px;
       margin: 0 auto 30px;
-      animation: fadeIn 1s ease-out;
     }
 
     section {
       margin-top: 30px;
-      animation: fadeIn 1s ease-in;
     }
 
     ul.hobbies {
@@ -149,36 +103,6 @@
       color: #ccc;
     }
 
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    /* 🌗 Dark Mode */
-    .dark-mode {
-      background: #121212 !important;
-      color: #ffffff !important;
-    }
-
-    .dark-mode nav {
-      background-color: #222 !important;
-    }
-
-    .dark-mode a {
-      color: #00ffff !important;
-    }
-
-    .dark-mode button {
-      background-color: #00cccc !important;
-      color: #000 !important;
-    }
-
     @media (max-width: 600px) {
       h1 {
         font-size: 26px;
@@ -193,45 +117,25 @@
         gap: 15px;
       }
     }
-
-    /* 🌙 Dark Mode Button */
-    #toggleDark {
-      position: fixed;
-      top: 15px;
-      right: 15px;
-      padding: 10px 14px;
-      background: #00ffff;
-      color: #000;
-      border: none;
-      border-radius: 20px;
-      cursor: pointer;
-      font-weight: bold;
-      z-index: 1000;
-    }
   </style>
 </head>
 <body>
 
-  <!-- ⏳ Preloader -->
-  <div id="preloader"></div>
-
-  <!-- 🌙 Dark Mode Toggle -->
-  <button id="toggleDark">🌙</button>
-
-  <!-- Navigation -->
+  <!-- ✅ Navigation with Scroll Effects link -->
   <nav>
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="music.html">Music</a></li>
       <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="scroll.html">Scroll Effects</a></li> <!-- NEW LINK -->
       <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
 
   <!-- Header -->
   <header>
-    <img src="https://via.placeholder.com/140.png?text=Parth" alt="PMZ" />
-    <h1><span id="typing-text"></span><span class="cursor">|</span></h1>
+    <img src="https://via.placeholder.com/140.png?text=Parth" alt="Parth Logo" />
+    <h1>🎧 Parth Music Zone</h1>
     <p>Welcome to my personal site! I love music, web design, and creativity.</p>
   </header>
 
@@ -254,39 +158,11 @@
     &copy; 2025 Parth Music Zone. All rights reserved.
   </footer>
 
-  <!-- JavaScript -->
+  <!-- Contact Alert -->
   <script>
-    // ⏳ Remove Preloader after load
-    window.addEventListener("load", () => {
-      const loader = document.getElementById("preloader");
-      loader.style.display = "none";
-    });
-
-    // ✉️ Contact
     function contactMe() {
       alert("📧 Email: parth@example.com");
     }
-
-    // ⌨️ Typing Text
-    const text = "🎧 Hi, I'm Parth";
-    let index = 0;
-    function typeText() {
-      const typingText = document.getElementById("typing-text");
-      if (index < text.length) {
-        typingText.innerHTML += text.charAt(index);
-        index++;
-        setTimeout(typeText, 100);
-      }
-    }
-    window.onload = typeText;
-
-    // 🌙 Dark Mode Toggle
-    const toggle = document.getElementById("toggleDark");
-    const body = document.body;
-    toggle.addEventListener("click", () => {
-      body.classList.toggle("dark-mode");
-      toggle.textContent = body.classList.contains("dark-mode") ? "🌞" : "🌙";
-    });
   </script>
 
 </body>
