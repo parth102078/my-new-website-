@@ -5,12 +5,13 @@
   <title>Blog – Parth Music Zone</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+
   <style>
     body {
       font-family: 'Poppins', sans-serif;
       background: linear-gradient(to right, #1e3c72, #2a5298);
       color: #fff;
-      padding: 20px;
+      padding: 30px;
       text-align: center;
     }
 
@@ -44,28 +45,44 @@
       margin-bottom: 30px;
     }
 
-    .blogs {
+    .blog-container {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-      padding: 10px;
+      gap: 25px;
+      padding: 0 10px;
     }
 
-    .card {
-      background-color: #ffffff11;
-      border-radius: 12px;
+    .blog-card {
+      background-color: rgba(255, 255, 255, 0.1);
       padding: 20px;
-      text-align: left;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
     }
 
-    .card h3 {
-      color: #00ffff;
+    .blog-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .blog-card h3 {
+      color: #ffffff;
       margin-bottom: 10px;
     }
 
-    .card p {
+    .blog-card p {
       font-size: 16px;
-      line-height: 1.6;
+      line-height: 1.5;
+    }
+
+    .blog-card a {
+      display: inline-block;
+      margin-top: 15px;
+      color: #00ffff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .blog-card a:hover {
+      text-decoration: underline;
     }
 
     footer {
@@ -73,39 +90,51 @@
       font-size: 14px;
       color: #ccc;
     }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 28px;
+      }
+    }
   </style>
 </head>
 <body>
 
+  <!-- ✅ Navigation -->
   <nav>
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="music.html">Music</a></li>
       <li><a href="gallery.html">Gallery</a></li>
       <li><a href="blog.html">Blog</a></li>
+      <li><a href="testimonial.html">Testimonials</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
 
-  <h1>📝 Latest Blog Posts</h1>
+  <h1>📝 My Blog Posts</h1>
 
-  <div class="blogs">
-
-    <div class="card">
-      <h3>🎧 My Top 5 Favorite Songs</h3>
-      <p>Discover the songs I can't stop listening to – from classical fusion to modern beats.</p>
+  <div class="blog-container">
+    <!-- Blog Card 1 -->
+    <div class="blog-card">
+      <h3>🎵 Why I Love Music</h3>
+      <p>Music is more than just sound – it's a feeling, a memory, a motivation. Here's why music means so much to me.</p>
+      <a href="#">Read More →</a>
     </div>
 
-    <div class="card">
-      <h3>💻 How I Built This Website</h3>
-      <p>Step by step guide of how I created 'Parth Music Zone' with HTML, CSS, and GitHub Pages.</p>
+    <!-- Blog Card 2 -->
+    <div class="blog-card">
+      <h3>💻 My Journey into Web Development</h3>
+      <p>From curiosity to code! Read how I started learning HTML, CSS, and building real websites like this one.</p>
+      <a href="#">Read More →</a>
     </div>
 
-    <div class="card">
-      <h3>📸 My Photography Journey</h3>
-      <p>From smartphone shots to DSLR, here's how I started capturing moments around me.</p>
+    <!-- Blog Card 3 -->
+    <div class="blog-card">
+      <h3>📸 Capturing Moments Through Photography</h3>
+      <p>Photos are time machines – explore how I fell in love with photography and what I enjoy capturing most.</p>
+      <a href="#">Read More →</a>
     </div>
-
   </div>
 
   <footer>
