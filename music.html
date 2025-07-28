@@ -2,16 +2,25 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Music - Parth Music Zone</title>
+  <title>Music – Parth Music Zone</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+
   <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
     body {
       font-family: 'Poppins', sans-serif;
-      background: linear-gradient(to right, #000428, #004e92);
-      color: #fff;
-      text-align: center;
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: #ffffff;
       padding: 20px;
+      text-align: center;
     }
 
     nav {
@@ -40,46 +49,100 @@
     }
 
     h1 {
-      font-size: 32px;
+      font-size: 36px;
       color: #00ffff;
-      margin-bottom: 30px;
+      margin-bottom: 20px;
+    }
+
+    h3 {
+      margin: 30px 0 10px;
+      color: #ffffff;
     }
 
     iframe {
+      border-radius: 12px;
       width: 100%;
       max-width: 600px;
-      height: 352px;
-      border-radius: 12px;
-      border: none;
-      margin: 20px 0;
+      height: 380px;
+      margin-bottom: 40px;
     }
 
     footer {
-      margin-top: 60px;
+      margin-top: 50px;
       font-size: 14px;
       color: #ccc;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 28px;
+      }
+
+      iframe {
+        height: 360px;
+      }
     }
   </style>
 </head>
 <body>
 
+  <!-- ✅ Navigation Bar -->
   <nav>
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="music.html">Music</a></li>
       <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="testimonial.html">Testimonials</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
 
-  <h1>🎶 My Favorite Songs</h1>
+  <h1>🎵 Trending Playlists – Parth Music Zone</h1>
 
-  <!-- Spotify Embed -->
-  <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DXcBWIGoYBM5M?utm_source=generator" loading="lazy"></iframe>
-  <iframe src="https://open.spotify.com/embed/track/1tf2iody5iRLYYPDSBpzRc?utm_source=generator" loading="lazy"></iframe>
+  <!-- ✅ Playlist 1 -->
+  <h3>🔥 Today’s Top Hits</h3>
+  <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DXcBWIGoYBM5M?utm_source=generator" 
+    frameborder="0" allowfullscreen="" 
+    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+    loading="lazy">
+  </iframe>
+
+  <!-- ✅ Playlist 2 -->
+  <h3>🎬 Bollywood Butter</h3>
+  <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DXd8cOUiye1o2?utm_source=generator" 
+    frameborder="0" allowfullscreen="" 
+    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+    loading="lazy">
+  </iframe>
+
+  <!-- ✅ Playlist 3 -->
+  <h3>🌙 Chill Hits</h3>
+  <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DX4WYpdgoIcn6?utm_source=generator" 
+    frameborder="0" allowfullscreen="" 
+    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+    loading="lazy">
+  </iframe>
+
+  <!-- ✅ Playlist 4 -->
+  <h3>☕ Lo-fi Beats</h3>
+  <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DXdxcBWuJkbcy?utm_source=generator" 
+    frameborder="0" allowfullscreen="" 
+    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+    loading="lazy">
+  </iframe>
+
+  <!-- ✅ Playlist 5 -->
+  <h3>🎸 Indie India</h3>
+  <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DX5q67ZpWyRrZ?utm_source=generator" 
+    frameborder="0" allowfullscreen="" 
+    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+    loading="lazy">
+  </iframe>
 
   <footer>
     &copy; 2025 Parth Music Zone. All rights reserved.
   </footer>
+
 </body>
 </html>
